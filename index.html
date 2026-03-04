@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muy Viajeras Chile | Accesorios de viaje muy girly ✈️✨</title>
+    <meta name="description"
+        content="Accesorios de viaje femeninos y girly para viajar linda. Envíos a todo Chile. Porta pasaportes, almohadas de viaje, scrunchies y más. Síguenos en Instagram @muyviajeraschile">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Nunito:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <style>
+        :root {
+            --pink: #FFB6C1;
+            --blush: #FFF0F5;
+            --rose: #F8B4C8;
+            --rose-dark: #e8829e;
+            --lilac: #C8A2C8;
+            --gold: #D4A574;
+            --gold-bright: #FFD700;
+            --white: #FFFFFF;
+            --text-dark: #5a3a4a;
+            --text-mid: #8a5a6a;
+            --text-light: #b8788a;
+            --card-bg: #fff5f8;
+            --shadow: 0 8px 32px rgba(248, 180, 200, 0.25);
+            --shadow-sm: 0 4px 16px rgba(248, 180, 200, 0.18);
+            --radius: 20px;
+            --radius-sm: 12px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--blush);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .page-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        body::before {
+            content: '🌸';
+            position: fixed;
+            top: 20%;
+            left: -20px;
+            font-size: 2rem;
+            opacity: 0.1;
+            z-index: -1;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        body::after {
+            content: '✈️';
+            position: fixed;
+            bottom: 15%;
+            right: -20px;
+            font-size: 1.5rem;
+            opacity: 0.1;
+            z-index: -1;
+            animation: float2 5s infinite ease-in-out;
+        }
+
+        .bg-decor {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-decor span {
+            position: absolute;
+            opacity: 0.08;
+            font-size: 1.2rem;
+        }
+
+        /* ANIMATIONS */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-18px)
+            }
+        }
+
+        @keyframes float2 {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-12px)
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% center
+            }
+
+            100% {
+                background-position: 200% center
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            40% {
+                transform: translateY(-10px)
+            }
+
+            60% {
+                transform: translateY(-5px)
+            }
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0)
+            }
+
+            100% {
+                transform: translateX(-50%)
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(248, 180, 200, 0.5)
+            }
+
+            50% {
+                transform: scale(1.04);
+                box-shadow: 0 0 0 12px rgba(248, 180, 200, 0)
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @keyframes cloudDrift {
+            0% {
+                transform: translateX(0)
+            }
+
+            100% {
+                transform: translateX(60px)
+            }
+        }
+
+        @keyframes heartBeat {
+
+            0%,
+            100% {
+                transform: scale(1)
+            }
+
+            50% {
+                transform: scale(1.3)
+            }
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffb6c1;
+            background-image:
+                radial-gradient(at 0% 0%, hsla(340, 100%, 85%, 1) 0, transparent 50%),
+                radial-gradient(at 50% 0%, hsla(20, 100%, 85%, 1) 0, transparent 50%),
+                radial-gradient(at 100% 0%, hsla(330, 100%, 80%, 1) 0, transparent 50%),
+                radial-gradient(at 0% 50%, hsla(350, 100%, 90%, 1) 0, transparent 50%),
+                radial-gradient(at 100% 50%, hsla(10, 100%, 90%, 1) 0, transparent 50%),
+                radial-gradient(at 0% 100%, hsla(320, 100%, 85%, 1) 0, transparent 50%),
+                radial-gradient(at 50% 100%, hsla(40, 100%, 90%, 1) 0, transparent 50%),
+                radial-gradient(at 100% 100%, hsla(340, 100%, 85%, 1) 0, transparent 50%);
+            overflow: hidden;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(40px);
+            pointer-events: none;
+            opacity: 0.3;
+        }
+
+        .cloud {
+            position: absolute;
+            opacity: 0.7;
+            animation: cloudDrift 8s ease-in-out infinite alternate;
+        }
+
+        .cloud svg {
+            filter: drop-shadow(0 4px 8px rgba(255, 180, 200, 0.3));
+        }
+
+        .cloud-1 {
+            top: 10%;
+            left: -20px;
+            animation-duration: 9s;
+        }
+
+        .cloud-2 {
+            top: 25%;
+            right: -10px;
+            animation-duration: 7s;
+            animation-direction: alternate-reverse;
+            opacity: 0.5;
+        }
+
+        .cloud-3 {
+            top: 60%;
+            left: 5%;
+            animation-duration: 11s;
+            opacity: 0.4;
+        }
+
+        .cloud-4 {
+            bottom: 20%;
+            right: 0;
+            animation-duration: 8s;
+            animation-direction: alternate-reverse;
+            opacity: 0.35;
+        }
+
+        .hero-logo {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            animation: float 4s ease-in-out infinite;
+            filter: drop-shadow(0 10px 30px rgba(200, 100, 130, 0.3));
+            margin-bottom: 1.2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-logo {
+            width: 120px;
+            margin-bottom: 1rem;
+            filter: brightness(1.2);
+        }
+
+        .hero h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.6rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #c0375a, #e8829e, #d4a574, #e8829e, #c0375a);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s linear infinite;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-tagline {
+            font-size: 1rem;
+            color: var(--text-mid);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            letter-spacing: 0.02em;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 1rem 2.2rem;
+            background: linear-gradient(135deg, #e8829e, #c0375a);
+            color: #fff;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 800;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 6px 24px rgba(192, 55, 90, 0.35);
+            animation: bounce 2s ease-in-out infinite;
+            letter-spacing: 0.03em;
+            transition: transform 0.2s;
+        }
+
+        .btn-primary:active {
+            transform: scale(0.96)
+        }
+
+        .hero-sparkles {
+            position: absolute;
+            pointer-events: none;
+            inset: 0;
+        }
+
+        .sparkle {
+            position: absolute;
+            font-size: 1.2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .sparkle:nth-child(1) {
+            top: 15%;
+            left: 15%;
+            animation-delay: 0s;
+        }
+
+        .sparkle:nth-child(2) {
+            top: 20%;
+            right: 20%;
+            animation-delay: 0.5s;
+        }
+
+        .sparkle:nth-child(3) {
+            top: 70%;
+            left: 10%;
+            animation-delay: 1s;
+        }
+
+        .sparkle:nth-child(4) {
+            bottom: 25%;
+            right: 15%;
+            animation-delay: 1.5s;
+        }
+
+        .sparkle:nth-child(5) {
+            top: 45%;
+            left: 5%;
+            animation-delay: 0.8s;
+            font-size: 0.9rem;
+        }
+
+        /* ===== MARQUEE ===== */
+        .marquee-bar {
+            background: linear-gradient(90deg, #e8829e, #c0375a);
+            padding: 0.85rem 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .marquee-track {
+            display: inline-flex;
+            animation: marquee 18s linear infinite;
+        }
+
+        .marquee-item {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #fff;
+            padding: 0 1.8rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        /* ===== SECTION TITLES ===== */
+        .section-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--rose-dark);
+            text-align: center;
+            margin-bottom: 0.4rem;
+        }
+
+        .section-sub {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ===== FEATURED CAROUSEL ===== */
+        .carousel-section {
+            padding: 2rem 0 1rem;
+        }
+
+        .carousel-section .section-title,
+        .carousel-section .section-sub {
+            padding: 0 1.5rem;
+        }
+
+        .swiper {
+            padding: 0.5rem 1.5rem 2rem !important;
+        }
+
+        .swiper-slide {
+            width: 220px;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .product-card:active {
+            transform: scale(0.98)
+        }
+
+        .product-card-img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .product-card-img-placeholder {
+            width: 100%;
+            height: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .product-card-body {
+            padding: 0.9rem 1rem 1rem;
+        }
+
+        .product-card-name {
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .product-card-price {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--rose-dark);
+            margin-bottom: 0.7rem;
+        }
+
+        .btn-buy {
+            display: block;
+            width: 100%;
+            padding: 0.6rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f8b4c8, #e8829e);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            transition: opacity 0.2s;
+        }
+
+        .btn-buy:active {
+            opacity: 0.8
+        }
+
+        .swiper-pagination-bullet {
+            background: var(--rose) !important;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--rose-dark) !important;
+        }
+
+        /* ===== CATEGORY PILLS ===== */
+        .pills-section {
+            padding: 1rem 0 0.5rem;
+        }
+
+        .pills-scroll {
+            display: flex;
+            gap: 0.6rem;
+            overflow-x: auto;
+            padding: 0.5rem 1.5rem 1rem;
+            scrollbar-width: none;
+        }
+
+        .pills-scroll::-webkit-scrollbar {
+            display: none
+        }
+
+        .pill {
+            flex-shrink: 0;
+            padding: 0.5rem 1.1rem;
+            border-radius: 50px;
+            border: 2px solid var(--rose-dark);
+            color: var(--rose-dark);
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            background: #fff;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .pill.active,
+        .pill:active {
+            background: var(--rose-dark);
+            color: #fff;
+        }
+
+        /* ===== PRODUCT GRID ===== */
+        .grid-section {
+            padding: 1rem 1.2rem 2rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .grid-card {
+            background: #fff;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .grid-card-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .grid-card-img-placeholder {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .heart-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .heart-btn:active {
+            transform: scale(1.3)
+        }
+
+        .heart-btn.liked {
+            animation: heartBeat 0.4s ease;
+        }
+
+        .grid-card-body {
+            padding: 0.7rem 0.8rem 0.9rem;
+        }
+
+        .grid-card-name {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.2rem;
+        }
+
+        .grid-card-price {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.1rem;
+            color: var(--rose-dark);
+            font-weight: 700;
+        }
+
+        /* ===== TRUST SECTION ===== */
+        .trust-section {
+            padding: 2rem 1.5rem;
+            background: linear-gradient(135deg, #fff5f8, #ffeaf2);
+        }
+
+        .trust-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .trust-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: var(--radius);
+            padding: 1.3rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .trust-icon {
+            font-size: 2.2rem;
+            flex-shrink: 0;
+        }
+
+        .trust-title {
+            font-weight: 800;
+            font-size: 1rem;
+            color: var(--text-dark);
+        }
+
+        .trust-sub {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        /* ===== INSTAGRAM SECTION ===== */
+        .insta-section {
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .insta-reel {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            height: 260px;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.2rem;
+        }
+
+        .insta-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .insta-slide.active {
+            opacity: 1
+        }
+
+        .insta-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .insta-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(200, 80, 120, 0.5), transparent 60%);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 1rem;
+        }
+
+        .insta-overlay span {
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.85rem;
+            letter-spacing: 0.04em;
+        }
+
+        .insta-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .insta-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--rose);
+            opacity: 0.4;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .insta-dot.active {
+            opacity: 1;
+            transform: scale(1.3);
+            background: var(--rose-dark);
+        }
+
+        .btn-insta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #fd5c87, #c93b7d);
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.92rem;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(200, 60, 120, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .btn-insta:active {
+            transform: scale(0.97)
+        }
+
+        /* ===== GIVEAWAY BANNER ===== */
+        .giveaway-section {
+            padding: 2rem 1.5rem;
+        }
+
+        .giveaway-banner {
+            border-radius: var(--radius);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            background: linear-gradient(135deg, #ffb6c1, #f8b4c8, #ffc5a0, #ffb6c1);
+            background-size: 300% 300%;
+            animation: gradientShift 4s ease infinite;
+            box-shadow: 0 12px 40px rgba(248, 180, 200, 0.4);
+        }
+
+        .giveaway-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            padding: 0.3rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .giveaway-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 8px rgba(180, 60, 100, 0.3);
+        }
+
+        .giveaway-sub {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-giveaway {
+            display: inline-block;
+            padding: 0.9rem 2.2rem;
+            background: #fff;
+            color: var(--rose-dark);
+            font-weight: 800;
+            font-size: 0.95rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(255, 255, 255, 0.5);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(135deg, #5a3a4a, #7a4a5a);
+            color: #fff;
+            padding: 2.5rem 1.5rem 3rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            width: 100px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+            filter: brightness(1.1);
+        }
+
+        .footer-tagline {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3rem;
+            color: var(--pink);
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .footer-insta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.2rem;
+            background: linear-gradient(135deg, #fd5c87, #c93b7d);
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            text-decoration: none;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.15);
+            margin: 1.2rem 0;
+        }
+
+        .footer-ship {
+            font-size: 0.9rem;
+            color: var(--pink);
+            font-weight: 700;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 240, 245, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(248, 180, 200, 0.3);
+            width: 100%;
+        }
+
+        .navbar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.8rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-logo img {
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .navbar-logo-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--rose-dark);
+        }
+
+        .navbar-menu {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .navbar-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .navbar-menu a:hover {
+            color: var(--rose-dark);
+        }
+
+        .navbar-cta {
+            background: linear-gradient(135deg, #e8829e, #c0375a) !important;
+            color: #fff !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 14px rgba(192, 55, 90, 0.3);
+        }
+
+        .navbar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--rose-dark);
+        }
+
+        /* Mobile navbar */
+        @media (max-width: 767px) {
+            .navbar-toggle {
+                display: block;
+            }
+
+            .navbar-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 240, 245, 0.97);
+                backdrop-filter: blur(12px);
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 1.2rem;
+                border-bottom: 1px solid rgba(248, 180, 200, 0.3);
+            }
+
+            .navbar-menu.open {
+                display: flex;
+            }
+        }
+
+        /* ===== DESKTOP RESPONSIVE ===== */
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 4rem;
+            }
+
+            .hero-tagline {
+                font-size: 1.2rem;
+            }
+
+            .hero-logo {
+                width: 220px;
+                height: 220px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .trust-grid {
+                flex-direction: row;
+            }
+
+            .swiper-slide {
+                width: 260px;
+            }
+
+            .grid-section,
+            .trust-section,
+            .insta-section,
+            .giveaway-section {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
+            .insta-reel {
+                height: 400px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero h1 {
+                font-size: 5rem;
+            }
+
+            .grid-card-img,
+            .grid-card-img-placeholder {
+                height: 200px;
+            }
+
+            .grid-section,
+            .trust-section,
+            .insta-section,
+            .giveaway-section {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+
+        /* ===== SECTION PADDING ===== */
+        section {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-decor">
+        <span style="top:10%; left:10%">✨</span>
+        <span style="top:30%; right:15%">�</span>
+        <span style="top:50%; left:5%">⭐</span>
+        <span style="top:70%; right:10%">💫</span>
+        <span style="top:90%; left:20%">✨</span>
+    </div>
+
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="#hero" class="navbar-logo">
+                <img src="logo.png" alt="Muy Viajeras Chile"
+                    onerror="this.outerHTML='<span class=\'navbar-logo-text\'>Muy Viajeras Chile</span>'">
+            </a>
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Menú">☰</button>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="#productos" onclick="closeMenu()">Productos ✨</a></li>
+                <li><a href="#trust" onclick="closeMenu()">Nosotras 💖</a></li>
+                <li><a href="#insta" onclick="closeMenu()">Instagram 📸</a></li>
+                <li><a href="https://instagram.com/muyviajeraschile" target="_blank" class="navbar-cta"
+                        onclick="closeMenu()">Comprar 🛍️</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MARQUEE -->
+    <div class="marquee-bar" aria-label="Beneficios">
+        <div class="marquee-track" id="marquee-track">
+            <span class="marquee-item">✈️ Envíos a todo Chile</span>
+            <span class="marquee-item">💝 Accesorios girly</span>
+            <span class="marquee-item">🌍 Para viajar linda</span>
+            <span class="marquee-item">📦 Packs especiales</span>
+            <span class="marquee-item">✨ Calidad premium</span>
+            <span class="marquee-item">🎀 Diseños únicos</span>
+            <span class="marquee-item">✈️ Envíos a todo Chile</span>
+            <span class="marquee-item">💝 Accesorios girly</span>
+            <span class="marquee-item">🌍 Para viajar linda</span>
+            <span class="marquee-item">📦 Packs especiales</span>
+            <span class="marquee-item">✨ Calidad premium</span>
+            <span class="marquee-item">🎀 Diseños únicos</span>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <div class="cloud cloud-1">
+                <svg width="90" height="50" viewBox="0 0 90 50" fill="none">
+                    <ellipse cx="45" cy="35" rx="40" ry="18" fill="white" fill-opacity="0.85" />
+                    <ellipse cx="30" cy="28" rx="22" ry="18" fill="white" fill-opacity="0.85" />
+                    <ellipse cx="58" cy="24" rx="18" ry="15" fill="white" fill-opacity="0.85" />
+                </svg>
+            </div>
+            <div class="cloud cloud-2">
+                <svg width="70" height="40" viewBox="0 0 70 40" fill="none">
+                    <ellipse cx="35" cy="28" rx="30" ry="14" fill="white" fill-opacity="0.7" />
+                    <ellipse cx="22" cy="22" rx="17" ry="14" fill="white" fill-opacity="0.7" />
+                    <ellipse cx="48" cy="18" rx="14" ry="12" fill="white" fill-opacity="0.7" />
+                </svg>
+            </div>
+            <div class="cloud cloud-3">
+                <svg width="110" height="55" viewBox="0 0 110 55" fill="none">
+                    <ellipse cx="55" cy="40" rx="50" ry="20" fill="white" fill-opacity="0.6" />
+                    <ellipse cx="35" cy="30" rx="27" ry="20" fill="white" fill-opacity="0.6" />
+                    <ellipse cx="72" cy="25" rx="22" ry="18" fill="white" fill-opacity="0.6" />
+                </svg>
+            </div>
+            <div class="cloud cloud-4">
+                <svg width="80" height="42" viewBox="0 0 80 42" fill="none">
+                    <ellipse cx="40" cy="30" rx="35" ry="15" fill="white" fill-opacity="0.5" />
+                    <ellipse cx="26" cy="24" rx="20" ry="16" fill="white" fill-opacity="0.5" />
+                    <ellipse cx="56" cy="20" rx="16" ry="13" fill="white" fill-opacity="0.5" />
+                </svg>
+            </div>
+            <div class="hero-sparkles">
+                <span class="sparkle">✨</span>
+                <span class="sparkle">💫</span>
+                <span class="sparkle">🌸</span>
+                <span class="sparkle">⭐</span>
+                <span class="sparkle">✨</span>
+            </div>
+            <img src="logo.png" alt="Muy Viajeras Chile Logo" class="hero-logo" id="hero-logo">
+            <h1>Muy Viajeras Chile</h1>
+            <p class="hero-tagline">Accesorios de viaje muy girly ✈️✨</p>
+            <a href="#productos" class="btn-primary" id="cta-ver-productos">Ver productos ✨</a>
+        </section>
+        <section class="carousel-section fade-in-up" id="productos">
+            <h2 class="section-title">Lo más amado 💖</h2>
+            <p class="section-sub">Nuestros favoritos del momento</p>
+            <div class="swiper featured-swiper" id="featured-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="product-pack.png" alt="Pack Muy Viajeras" class="product-card-img">
+                            <div class="product-card-body">
+                                <div class="product-card-name">Pack Muy Viajeras ✈️</div>
+                                <div class="product-card-price">$12.000</div>
+                                <a href="https://instagram.com/muyviajeraschile" target="_blank" class="btn-buy"
+                                    id="buy-pack-viajeras">Comprar 💝</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="product-scrunchie.png" alt="Scrunchie Viajero" class="product-card-img">
+                            <div class="product-card-body">
+                                <div class="product-card-name">Scrunchie Viajero 🎀</div>
+                                <div class="product-card-price">$3.500</div>
+                                <a href="https://instagram.com/muyviajeraschile" target="_blank" class="btn-buy"
+                                    id="buy-scrunchie">Comprar 💝</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <div class="product-card-img-placeholder"
+                                style="background:linear-gradient(135deg,#ffe4ec,#ffd6e7)">🧳</div>
+                            <div class="product-card-body">
+                                <div class="product-card-name">Pack Express ✨</div>
+                                <div class="product-card-price">$8.900</div>
+                                <a href="https://instagram.com/muyviajeraschile" target="_blank" class="btn-buy"
+                                    id="buy-pack-express">Comprar 💝</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="product-scale.png" alt="Pesa de maleta" class="product-card-img">
+                            <div class="product-card-body">
+                                <div class="product-card-name">Pesa de Maleta 💗</div>
+                                <div class="product-card-price">$7.500</div>
+                                <a href="https://instagram.com/muyviajeraschile" target="_blank" class="btn-buy"
+                                    id="buy-scale">Comprar 💝</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="product-cubes.png" alt="Set organizador maleta" class="product-card-img">
+                            <div class="product-card-body">
+                                <div class="product-card-name">Set Organizador 🌸</div>
+                                <div class="product-card-price">$11.500</div>
+                                <a href="https://instagram.com/muyviajeraschile" target="_blank" class="btn-buy"
+                                    id="buy-cubes">Comprar 💝</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product-card">
+                            <img src="product-passport.png" alt="Porta Pasaporte" class="product-card-img">
+                            <div class="product-card-body">
+                                <div class="product-card-name">Porta Pasaporte 💗</div>
+                                <div class="product-card-price">$5.900</div>
+                                <a href="https://instagram.com/muyviajeraschile" target="_blank" class="btn-buy"
+                                    id="buy-passport">Comprar 💝</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- CATEGORY PILLS -->
+        <section class="pills-section" aria-label="Categorías">
+            <div class="pills-scroll" id="pills-scroll">
+                <button class="pill active" id="pill-todos" data-cat="all">Todos</button>
+                <button class="pill" id="pill-packs" data-cat="packs">Packs 🎀</button>
+                <button class="pill" id="pill-org" data-cat="organizacion">Organización 🧳</button>
+                <button class="pill" id="pill-acc" data-cat="accesorios">Accesorios ✨</button>
+                <button class="pill" id="pill-clima" data-cat="clima">Clima ❄️</button>
+            </div>
+        </section>
+
+        <!-- PRODUCT GRID -->
+        <section class="grid-section fade-in-up" aria-label="Todos los productos">
+            <div class="product-grid" id="product-grid">
+
+                <div class="grid-card" data-cat="packs">
+                    <img src="product-pack.png" alt="Pack Muy Viajeras" class="grid-card-img">
+                    <button class="heart-btn" id="heart-1" aria-label="Me gusta">🤍</button>
+                    <div class="grid-card-body">
+                        <div class="grid-card-name">Pack Muy Viajeras ✈️</div>
+                        <div class="grid-card-price">$12.000</div>
+                    </div>
+                </div>
+
+                <div class="grid-card" data-cat="accesorios">
+                    <img src="product-scrunchie.png" alt="Scrunchie Viajero" class="grid-card-img">
+                    <button class="heart-btn" id="heart-2" aria-label="Me gusta">🤍</button>
+                    <div class="grid-card-body">
+                        <div class="grid-card-name">Scrunchie Viajero 🎀</div>
+                        <div class="grid-card-price">$3.500</div>
+                    </div>
+                </div>
+
+                <div class="grid-card" data-cat="packs">
+                    <div class="grid-card-img-placeholder" style="background:linear-gradient(135deg,#ffd6e0,#ffb6c1)">🎀
+                    </div>
+                    <button class="heart-btn" id="heart-3" aria-label="Me gusta">🤍</button>
+                    <div class="grid-card-body">
+                        <div class="grid-card-name">Pack Express ✨</div>
+                        <div class="grid-card-price">$8.900</div>
+                    </div>
+                </div>
+
+                <div class="grid-card" data-cat="accesorios">
+                    <img src="product-scale.png" alt="Pesa de Maleta" class="grid-card-img">
+                    <button class="heart-btn" id="heart-4" aria-label="Me gusta">🤍</button>
+                    <div class="grid-card-body">
+                        <div class="grid-card-name">Pesa de Maleta 💗</div>
+                        <div class="grid-card-price">$7.500</div>
+                    </div>
+                </div>
+
+                <div class="grid-card" data-cat="organizacion">
+                    <img src="product-cubes.png" alt="Set Organizador" class="grid-card-img">
+                    <button class="heart-btn" id="heart-5" aria-label="Me gusta">🤍</button>
+                    <div class="grid-card-body">
+                        <div class="grid-card-name">Set Organizador 🌸</div>
+                        <div class="grid-card-price">$11.500</div>
+                    </div>
+                </div>
+
+                <div class="grid-card" data-cat="accesorios">
+                    <img src="product-passport.png" alt="Porta Pasaporte" class="grid-card-img">
+                    <button class="heart-btn" id="heart-6" aria-label="Me gusta">🤍</button>
+                    <div class="grid-card-body">
+                        <div class="grid-card-name">Porta Pasaporte 💗</div>
+                        <div class="grid-card-price">$5.900</div>
+                    </div>
+                </div>
+
+                <div class="grid-card" data-cat="clima">
+                    <div class="grid-card-img-placeholder" style="background:linear-gradient(135deg,#e8f5ff,#c8e8ff)">❄️
+                    </div>
+                    <button class="heart-btn" id="heart-7" aria-label="Me gusta">🤍</button>
+                    <div class="grid-card-body">
+                        <div class="grid-card-name">Beanie Viajera ⛄</div>
+                        <div class="grid-card-price">$6.500</div>
+                    </div>
+                </div>
+
+                <div class="grid-card" data-cat="clima">
+                    <div class="grid-card-img-placeholder" style="background:linear-gradient(135deg,#f5e8ff,#e8d0ff)">🧣
+                    </div>
+                    <button class="heart-btn" id="heart-8" aria-label="Me gusta">🤍</button>
+                    <div class="grid-card-body">
+                        <div class="grid-card-name">Bufanda Girly 🌸</div>
+                        <div class="grid-card-price">$5.500</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TRUST SECTION -->
+        <section class="trust-section fade-in-up" aria-label="Por qué elegirnos" id="trust">
+            <h2 class="section-title">¿Por qué elegirnos? 💖</h2>
+            <p class="section-sub">Miles de viajeras confían en nosotras</p>
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">💖</div>
+                    <div>
+                        <div class="trust-title">14.3K Seguidoras</div>
+                        <div class="trust-sub">Una comunidad de viajeras soñadoras</div>
+                    </div>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🚀</div>
+                    <div>
+                        <div class="trust-title">Envíos a todo Chile</div>
+                        <div class="trust-sub">Desde Arica a Punta Arenas 🇨🇱</div>
+                    </div>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">⭐</div>
+                    <div>
+                        <div class="trust-title">Calidad Garantizada</div>
+                        <div class="trust-sub">Productos seleccionados con amor y cuidado</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INSTAGRAM -->
+        <section class="insta-section fade-in-up" aria-label="Instagram" id="insta">
+            <h2 class="section-title">Nuestro Mundo ✨</h2>
+            <p class="section-sub">Vibes girly para tu próxima aventura</p>
+            <div class="insta-reel" id="insta-reel">
+                <div class="insta-slide active" id="insta-slide-0"
+                    style="background:linear-gradient(135deg,#ffb6c1,#ffc5a0)">
+                    <img src="product-pack.png" alt="Pack viajero" style="width:100%;height:100%;object-fit:cover;">
+                    <div class="insta-overlay"><span>@muyviajeraschile ✈️</span></div>
+                </div>
+                <div class="insta-slide" id="insta-slide-1" style="background:linear-gradient(135deg,#f8b4c8,#c8a2c8)">
+                    <img src="product-passport.png" alt="Porta pasaporte"
+                        style="width:100%;height:100%;object-fit:cover;">
+                    <div class="insta-overlay"><span>@muyviajeraschile 💗</span></div>
+                </div>
+                <div class="insta-slide" id="insta-slide-2" style="background:linear-gradient(135deg,#c8a2c8,#ffb6c1)">
+                    <img src="product-scrunchie.png" alt="Scrunchies viajeras"
+                        style="width:100%;height:100%;object-fit:cover;">
+                    <div class="insta-overlay"><span>@muyviajeraschile 🌸</span></div>
+                </div>
+            </div>
+            <div class="insta-dots">
+                <span class="insta-dot active" id="idot-0"></span>
+                <span class="insta-dot" id="idot-1"></span>
+                <span class="insta-dot" id="idot-2"></span>
+            </div>
+            <a href="https://instagram.com/muyviajeraschile" target="_blank" class="btn-insta" id="btn-insta-follow">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+                Síguenos @muyviajeraschile
+            </a>
+        </section>
+
+        <!-- GIVEAWAY -->
+        <section class="giveaway-section fade-in-up" aria-label="Giveaway">
+            <div class="giveaway-banner">
+                <div class="giveaway-badge">🎁 GIVEAWAY ACTIVO</div>
+                <h2 class="giveaway-title">¡Gana tu Pack de Viaje!</h2>
+                <p class="giveaway-sub">Participa gratis en nuestro Instagram<br>y viaja linda con nosotras 💖</p>
+                <a href="https://instagram.com/muyviajeraschile" target="_blank" class="btn-giveaway"
+                    id="btn-giveaway">Participar ahora ✨</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="logo.png" alt="Muy Viajeras Chile" class="footer-logo">
+        <div class="footer-tagline">Muy Viajeras Chile</div>
+        <p class="footer-text">Accesorios de viaje muy girly ✈️✨</p>
+        <div class="footer-divider"></div>
+        <p class="footer-text">📩 Escríbenos por DM en Instagram</p>
+        <a href="https://instagram.com/muyviajeraschile" target="_blank" class="footer-insta" id="footer-insta-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+            @muyviajeraschile
+        </a>
+        <div class="footer-divider"></div>
+        <p class="footer-ship">🇨🇱 Envíos a todo Chile con amor</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Swiper carousel
+        const swiper = new Swiper('.featured-swiper', {
+            slidesPerView: 'auto',
+            spaceBetween: 14,
+            centeredSlides: false,
+            loop: true,
+            autoplay: { delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            touchStartPreventDefault: false,
+        });
+
+        // Category pills filter
+        const pills = document.querySelectorAll('.pill');
+        const gridCards = document.querySelectorAll('#product-grid .grid-card');
+        pills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                pills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+                const cat = pill.dataset.cat;
+                gridCards.forEach(card => {
+                    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+                });
+            });
+        });
+
+        // Heart wishlist toggle
+        document.querySelectorAll('.heart-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const liked = btn.classList.toggle('liked');
+                btn.textContent = liked ? '❤️' : '🤍';
+            });
+        });
+
+        // Instagram gallery auto-rotate
+        let instaIdx = 0;
+        const instaSlides = document.querySelectorAll('.insta-slide');
+        const instaDots = document.querySelectorAll('.insta-dot');
+        function nextInsta() {
+            instaSlides[instaIdx].classList.remove('active');
+            instaDots[instaIdx].classList.remove('active');
+            instaIdx = (instaIdx + 1) % instaSlides.length;
+            instaSlides[instaIdx].classList.add('active');
+            instaDots[instaIdx].classList.add('active');
+        }
+        setInterval(nextInsta, 2800);
+
+        // IntersectionObserver fade-in-up
+        const fadeEls = document.querySelectorAll('.fade-in-up');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        fadeEls.forEach(el => observer.observe(el));
+
+        function closeMenu() {
+            document.getElementById('navbar-menu').classList.remove('open');
+        }
+        document.getElementById('navbar-toggle').addEventListener('click', () => {
+            document.getElementById('navbar-menu').classList.toggle('open');
+        });
+    </script>
+</body>
+
+</html>
