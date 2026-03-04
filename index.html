@@ -311,16 +311,19 @@
             height: 180px;
             object-fit: contain;
             animation: float 4s ease-in-out infinite;
-            filter: drop-shadow(0 10px 30px rgba(200, 100, 130, 0.3));
+            filter: drop-shadow(0 10px 30px rgba(200, 100, 130, 0.3)) brightness(1.05) contrast(1.05);
             margin-bottom: 1.2rem;
             position: relative;
             z-index: 2;
+            mix-blend-mode: multiply;
+            border-radius: 50%;
         }
 
         .footer-logo {
             width: 120px;
             margin-bottom: 1rem;
-            filter: brightness(1.2);
+            filter: brightness(1.5) contrast(1.2);
+            mix-blend-mode: screen;
         }
 
         .hero h1 {
