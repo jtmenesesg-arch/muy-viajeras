@@ -860,6 +860,12 @@
         footer {
             background: linear-gradient(135deg, #5a3a4a, #7a4a5a);
             color: #fff;
+            width: 100%;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 2.5rem 1.5rem 3rem;
             text-align: center;
         }
@@ -1006,8 +1012,13 @@
 
         /* ===== DESKTOP RESPONSIVE ===== */
         @media (min-width: 768px) {
+            .hero {
+                min-height: 90vh;
+                padding: 4rem 2rem;
+            }
+
             .hero h1 {
-                font-size: 4rem;
+                font-size: 4.5rem;
             }
 
             .hero-tagline {
@@ -1015,8 +1026,8 @@
             }
 
             .hero-logo {
-                width: 220px;
-                height: 220px;
+                width: 260px;
+                height: 260px;
             }
 
             .product-grid {
@@ -1025,6 +1036,10 @@
 
             .trust-grid {
                 flex-direction: row;
+            }
+
+            .trust-card {
+                flex: 1;
             }
 
             .swiper-slide {
@@ -1114,49 +1129,51 @@
         </div>
     </div>
 
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="cloud cloud-1">
+            <svg width="90" height="50" viewBox="0 0 90 50" fill="none">
+                <ellipse cx="45" cy="35" rx="40" ry="18" fill="white" fill-opacity="0.85" />
+                <ellipse cx="30" cy="28" rx="22" ry="18" fill="white" fill-opacity="0.85" />
+                <ellipse cx="58" cy="24" rx="18" ry="15" fill="white" fill-opacity="0.85" />
+            </svg>
+        </div>
+        <div class="cloud cloud-2">
+            <svg width="70" height="40" viewBox="0 0 70 40" fill="none">
+                <ellipse cx="35" cy="28" rx="30" ry="14" fill="white" fill-opacity="0.7" />
+                <ellipse cx="22" cy="22" rx="17" ry="14" fill="white" fill-opacity="0.7" />
+                <ellipse cx="48" cy="18" rx="14" ry="12" fill="white" fill-opacity="0.7" />
+            </svg>
+        </div>
+        <div class="cloud cloud-3">
+            <svg width="110" height="55" viewBox="0 0 110 55" fill="none">
+                <ellipse cx="55" cy="40" rx="50" ry="20" fill="white" fill-opacity="0.6" />
+                <ellipse cx="35" cy="30" rx="27" ry="20" fill="white" fill-opacity="0.6" />
+                <ellipse cx="72" cy="25" rx="22" ry="18" fill="white" fill-opacity="0.6" />
+            </svg>
+        </div>
+        <div class="cloud cloud-4">
+            <svg width="80" height="42" viewBox="0 0 80 42" fill="none">
+                <ellipse cx="40" cy="30" rx="35" ry="15" fill="white" fill-opacity="0.5" />
+                <ellipse cx="26" cy="24" rx="20" ry="16" fill="white" fill-opacity="0.5" />
+                <ellipse cx="56" cy="20" rx="16" ry="13" fill="white" fill-opacity="0.5" />
+            </svg>
+        </div>
+        <div class="hero-sparkles">
+            <span class="sparkle">✨</span>
+            <span class="sparkle">💫</span>
+            <span class="sparkle">🌸</span>
+            <span class="sparkle">⭐</span>
+            <span class="sparkle">✨</span>
+        </div>
+        <img src="logo.png" alt="Muy Viajeras Chile Logo" class="hero-logo" id="hero-logo">
+        <h1>Muy Viajeras Chile</h1>
+        <p class="hero-tagline">Accesorios de viaje muy girly ✈️✨</p>
+        <a href="#productos" class="btn-primary" id="cta-ver-productos">Ver productos ✨</a>
+    </section>
+
     <div class="page-wrapper">
-        <!-- HERO -->
-        <section class="hero" id="hero">
-            <div class="cloud cloud-1">
-                <svg width="90" height="50" viewBox="0 0 90 50" fill="none">
-                    <ellipse cx="45" cy="35" rx="40" ry="18" fill="white" fill-opacity="0.85" />
-                    <ellipse cx="30" cy="28" rx="22" ry="18" fill="white" fill-opacity="0.85" />
-                    <ellipse cx="58" cy="24" rx="18" ry="15" fill="white" fill-opacity="0.85" />
-                </svg>
-            </div>
-            <div class="cloud cloud-2">
-                <svg width="70" height="40" viewBox="0 0 70 40" fill="none">
-                    <ellipse cx="35" cy="28" rx="30" ry="14" fill="white" fill-opacity="0.7" />
-                    <ellipse cx="22" cy="22" rx="17" ry="14" fill="white" fill-opacity="0.7" />
-                    <ellipse cx="48" cy="18" rx="14" ry="12" fill="white" fill-opacity="0.7" />
-                </svg>
-            </div>
-            <div class="cloud cloud-3">
-                <svg width="110" height="55" viewBox="0 0 110 55" fill="none">
-                    <ellipse cx="55" cy="40" rx="50" ry="20" fill="white" fill-opacity="0.6" />
-                    <ellipse cx="35" cy="30" rx="27" ry="20" fill="white" fill-opacity="0.6" />
-                    <ellipse cx="72" cy="25" rx="22" ry="18" fill="white" fill-opacity="0.6" />
-                </svg>
-            </div>
-            <div class="cloud cloud-4">
-                <svg width="80" height="42" viewBox="0 0 80 42" fill="none">
-                    <ellipse cx="40" cy="30" rx="35" ry="15" fill="white" fill-opacity="0.5" />
-                    <ellipse cx="26" cy="24" rx="20" ry="16" fill="white" fill-opacity="0.5" />
-                    <ellipse cx="56" cy="20" rx="16" ry="13" fill="white" fill-opacity="0.5" />
-                </svg>
-            </div>
-            <div class="hero-sparkles">
-                <span class="sparkle">✨</span>
-                <span class="sparkle">💫</span>
-                <span class="sparkle">🌸</span>
-                <span class="sparkle">⭐</span>
-                <span class="sparkle">✨</span>
-            </div>
-            <img src="logo.png" alt="Muy Viajeras Chile Logo" class="hero-logo" id="hero-logo">
-            <h1>Muy Viajeras Chile</h1>
-            <p class="hero-tagline">Accesorios de viaje muy girly ✈️✨</p>
-            <a href="#productos" class="btn-primary" id="cta-ver-productos">Ver productos ✨</a>
-        </section>
+        <!-- FEATURED CAROUSEL -->
         <section class="carousel-section fade-in-up" id="productos">
             <h2 class="section-title">Lo más amado 💖</h2>
             <p class="section-sub">Nuestros favoritos del momento</p>
@@ -1406,20 +1423,23 @@
 
     <!-- FOOTER -->
     <footer>
-        <img src="logo.png" alt="Muy Viajeras Chile" class="footer-logo">
-        <div class="footer-tagline">Muy Viajeras Chile</div>
-        <p class="footer-text">Accesorios de viaje muy girly ✈️✨</p>
-        <div class="footer-divider"></div>
-        <p class="footer-text">📩 Escríbenos por DM en Instagram</p>
-        <a href="https://instagram.com/muyviajeraschile" target="_blank" class="footer-insta" id="footer-insta-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-            </svg>
-            @muyviajeraschile
-        </a>
-        <div class="footer-divider"></div>
-        <p class="footer-ship">🇨🇱 Envíos a todo Chile con amor</p>
+        <div class="footer-inner">
+            <img src="logo.png" alt="Muy Viajeras Chile" class="footer-logo">
+            <div class="footer-tagline">Muy Viajeras Chile</div>
+            <p class="footer-text">Accesorios de viaje muy girly ✈️✨</p>
+            <div class="footer-divider"></div>
+            <p class="footer-text">📩 Escríbenos por DM en Instagram</p>
+            <a href="https://instagram.com/muyviajeraschile" target="_blank" class="footer-insta"
+                id="footer-insta-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+                @muyviajeraschile
+            </a>
+            <div class="footer-divider"></div>
+            <p class="footer-ship">🇨🇱 Envíos a todo Chile con amor</p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
