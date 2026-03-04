@@ -311,19 +311,19 @@
             height: 180px;
             object-fit: contain;
             animation: float 4s ease-in-out infinite;
-            filter: drop-shadow(0 10px 30px rgba(200, 100, 130, 0.3)) brightness(1.05) contrast(1.05);
+            filter: drop-shadow(0 10px 30px rgba(200, 100, 130, 0.3)) contrast(1.2) brightness(1.1);
             margin-bottom: 1.2rem;
             position: relative;
             z-index: 2;
             mix-blend-mode: multiply;
-            border-radius: 50%;
         }
 
         .footer-logo {
             width: 120px;
             margin-bottom: 1rem;
-            filter: brightness(1.5) contrast(1.2);
+            filter: brightness(2) contrast(1.5) grayscale(1) invert(1);
             mix-blend-mode: screen;
+            opacity: 0.9;
         }
 
         .hero h1 {
@@ -943,6 +943,8 @@
         .navbar-logo img {
             height: 40px;
             object-fit: contain;
+            mix-blend-mode: multiply;
+            filter: contrast(1.1) brightness(1.05);
         }
 
         .navbar-logo-text {
