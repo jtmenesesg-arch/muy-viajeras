@@ -1030,6 +1030,26 @@
                 height: 260px;
             }
 
+            .cloud-1 {
+                left: 2%;
+            }
+
+            .cloud-2 {
+                right: 2%;
+            }
+
+            .cloud-3 {
+                left: 8%;
+            }
+
+            .cloud-4 {
+                right: 5%;
+            }
+
+            .cloud svg {
+                transform: scale(1.5);
+            }
+
             .product-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
@@ -1056,6 +1076,9 @@
 
             .insta-reel {
                 height: 400px;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
 
@@ -1445,15 +1468,24 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         // Swiper carousel
-        const swiper = new Swiper('.featured-swiper', {
-            slidesPerView: 'auto',
-            spaceBetween: 14,
-            centeredSlides: false,
-            loop: true,
-            autoplay: { delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true },
-            pagination: { el: '.swiper-pagination', clickable: true },
-            touchStartPreventDefault: false,
-        });
+        if (window.innerWidth >= 768) {
+            new Swiper('.featured-swiper', {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: { delay: 3000, disableOnInteraction: false },
+                pagination: { el: '.swiper-pagination', clickable: true },
+            });
+        } else {
+            new Swiper('.featured-swiper', {
+                slidesPerView: 'auto',
+                spaceBetween: 14,
+                loop: true,
+                autoplay: { delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true },
+                pagination: { el: '.swiper-pagination', clickable: true },
+                touchStartPreventDefault: false,
+            });
+        }
 
         // Category pills filter
         const pills = document.querySelectorAll('.pill');
